@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — PixelBind</title>
+<meta name="description" content="Privacy Policy for PixelBind - Free Images to PDF Converter">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cabinet+Grotesk:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0a0a;
+  --surface: #141414;
+  --surface2: #1e1e1e;
+  --border: rgba(255,255,255,0.08);
+  --coral: #ff4d2e;
+  --text: #ffffff;
+  --muted: #888888;
+  --radius: 16px;
+}
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  font-family:'Cabinet Grotesk',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  min-height:100vh;
+  line-height:1.7;
+}
+
+/* NAV */
+nav {
+  position:sticky; top:0; z-index:100;
+  display:flex; align-items:center;
+  justify-content:space-between;
+  padding:16px 48px;
+  background:rgba(10,10,10,0.9);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+}
+.logo-wrap {
+  display:flex; align-items:center;
+  gap:10px; text-decoration:none;
+}
+.logo-main {
+  font-family:'Bebas Neue',sans-serif;
+  font-size:1.6rem; letter-spacing:2px;
+  display:flex;
+}
+.lp { color:#ffffff; }
+.lb { color:var(--coral); }
+.logo-sub {
+  font-size:0.48rem; letter-spacing:3px;
+  text-transform:uppercase; color:var(--muted);
+  font-weight:700;
+}
+.back-btn {
+  background:rgba(255,77,46,0.1);
+  border:1px solid rgba(255,77,46,0.25);
+  border-radius:50px;
+  padding:8px 20px;
+  color:var(--coral);
+  font-family:'Cabinet Grotesk',sans-serif;
+  font-size:0.8rem; font-weight:700;
+  text-decoration:none;
+  transition:all .2s;
+}
+.back-btn:hover {
+  background:rgba(255,77,46,0.2);
+}
+
+/* HERO */
+.hero {
+  background:var(--surface);
+  border-bottom:1px solid var(--border);
+  padding:60px 48px 50px;
+  text-align:center;
+}
+.hero-tag {
+  display:inline-block;
+  background:rgba(255,77,46,0.1);
+  border:1px solid rgba(255,77,46,0.25);
+  border-radius:50px;
+  padding:6px 18px;
+  font-size:0.72rem; font-weight:800;
+  letter-spacing:2px; text-transform:uppercase;
+  color:var(--coral);
+  margin-bottom:20px;
+}
+.hero h1 {
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(2.5rem,5vw,4rem);
+  letter-spacing:-1px;
+  margin-bottom:12px;
+}
+.hero p {
+  color:var(--muted);
+  font-size:0.9rem;
+  max-width:500px;
+  margin:0 auto;
+}
+.updated {
+  display:inline-block;
+  margin-top:16px;
+  background:var(--surface2);
+  border-radius:50px;
+  padding:6px 16px;
+  font-size:0.76rem;
+  color:var(--muted);
+}
+
+/* CONTENT */
+.content {
+  max-width:800px;
+  margin:0 auto;
+  padding:48px 48px 80px;
+}
+
+.section {
+  margin-bottom:40px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:28px;
+  transition:border-color .2s;
+}
+.section:hover {
+  border-color:rgba(255,77,46,0.2);
+}
+
+.section-num {
+  font-size:0.68rem; font-weight:800;
+  letter-spacing:2px; text-transform:uppercase;
+  color:var(--coral);
+  margin-bottom:8px;
+  display:flex; align-items:center; gap:8px;
+}
+.section-num::before {
+  content:'';
+  width:3px; height:12px;
+  background:var(--coral);
+  border-radius:2px;
+}
+
+.section h2 {
+  font-family:'Bebas Neue',sans-serif;
+  font-size:1.6rem; letter-spacing:0.5px;
+  margin-bottom:14px;
+  color:var(--text);
+}
+
+.section p {
+  color:var(--muted);
+  font-size:0.92rem;
+  margin-bottom:12px;
+}
+.section p:last-child { margin-bottom:0; }
+
+.section ul {
+  list-style:none;
+  padding:0; margin:12px 0;
+}
+.section ul li {
+  color:var(--muted);
+  font-size:0.92rem;
+  padding:6px 0;
+  padding-left:20px;
+  position:relative;
+}
+.section ul li::before {
+  content:'→';
+  color:var(--coral);
+  position:absolute;
+  left:0;
+}
+
+.highlight-box {
+  background:rgba(255,77,46,0.06);
+  border:1px solid rgba(255,77,46,0.15);
+  border-radius:10px;
+  padding:16px 20px;
+  margin:14px 0;
+}
+.highlight-box p {
+  color:var(--text) !important;
+  font-size:0.88rem !important;
+  margin:0 !important;
+}
+
+.contact-box {
+  background:var(--surface2);
+  border-radius:12px;
+  padding:20px;
+  margin-top:14px;
+}
+.contact-box a {
+  color:var(--coral);
+  text-decoration:none;
+}
+.contact-box a:hover {
+  text-decoration:underline;
+}
+
+/* TABLE */
+.data-table {
+  width:100%;
+  border-collapse:collapse;
+  margin:14px 0;
+  font-size:0.86rem;
+}
+.data-table th {
+  background:var(--surface2);
+  color:var(--text);
+  padding:10px 14px;
+  text-align:left;
+  font-weight:700;
+  font-size:0.78rem;
+  letter-spacing:0.5px;
+  text-transform:uppercase;
+}
+.data-table td {
+  padding:10px 14px;
+  color:var(--muted);
+  border-bottom:1px solid var(--border);
+}
+.data-table tr:last-child td {
+  border-bottom:none;
+}
+
+/* FOOTER */
+footer {
+  border-top:1px solid var(--border);
+  padding:28px 48px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:16px;
+}
+.footer-logo {
+  font-family:'Bebas Neue',sans-serif;
+  font-size:1.2rem; letter-spacing:2px;
+}
+.footer-logo .fp { color:var(--coral); }
+.footer-logo .fb { color:var(--text); }
+.footer-links {
+  display:flex; gap:20px;
+}
+.footer-links a {
+  font-size:0.75rem; color:var(--muted);
+  text-decoration:none; transition:color .2s;
+}
+.footer-links a:hover { color:var(--coral); }
+.footer-copy {
+  font-size:0.72rem; color:var(--muted);
+}
+
+/* Responsive */
+@media(max-width:768px) {
+  nav { padding:14px 20px; }
+  .hero { padding:40px 20px 36px; }
+  .content { padding:32px 20px 60px; }
+  footer { padding:24px 20px; }
+  .footer-links { display:none; }
+}
+@media(max-width:480px) {
+  nav { padding:12px 16px; }
+  .hero { padding:32px 16px 28px; }
+  .content { padding:24px 16px 48px; }
+  .section { padding:20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="logo-wrap" href="index.html">
+    <div>
+      <div class="logo-main">
+        <span class="lp">Pixel</span>
+        <span class="lb">Bind</span>
+      </div>
+      <div class="logo-sub">Images to PDF</div>
+    </div>
+  </a>
+  <a class="back-btn" href="index.html">
+    ← Back to App
+  </a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-tag">Legal Document</div>
+  <h1>Privacy Policy</h1>
+  <p>We respect your privacy. Here's exactly what we collect, why, and how we protect your data.</p>
+  <div class="updated">
+    📅 Last Updated: March 2025
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+  <!-- 1. Introduction -->
+  <div class="section">
+    <div class="section-num">01</div>
+    <h2>Introduction</h2>
+    <p>Welcome to <strong style="color:#fff">PixelBind</strong> ("we", "our", or "us"). We operate the website <strong style="color:#fff">pixel-bind.vercel.app</strong> (the "Service").</p>
+    <p>This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website. Please read this policy carefully.</p>
+    <div class="highlight-box">
+      <p>🔒 <strong>Important:</strong> PixelBind processes all files entirely in your browser. Your images and PDF files are NEVER uploaded to our servers. We have zero access to your documents.</p>
+    </div>
+  </div>
+
+  <!-- 2. Information We Collect -->
+  <div class="section">
+    <div class="section-num">02</div>
+    <h2>Information We Collect</h2>
+    <p>We collect minimal information to provide and improve our service:</p>
+
+    <table class="data-table">
+      <tr>
+        <th>Type</th>
+        <th>What</th>
+        <th>Why</th>
+      </tr>
+      <tr>
+        <td>Usage Data</td>
+        <td>Pages visited, time spent, browser type</td>
+        <td>Improve user experience</td>
+      </tr>
+      <tr>
+        <td>Device Info</td>
+        <td>Screen size, operating system</td>
+        <td>Optimize display</td>
+      </tr>
+      <tr>
+        <td>IP Address</td>
+        <td>General location (country/city)</td>
+        <td>Analytics only</td>
+      </tr>
+      <tr>
+        <td>Cookies</td>
+        <td>Preferences, ad tracking</td>
+        <td>Ads and analytics</td>
+      </tr>
+    </table>
+
+    <p>We do <strong style="color:#fff">NOT</strong> collect:</p>
+    <ul>
+      <li>Your name or email address</li>
+      <li>Your images or PDF files</li>
+      <li>Payment information</li>
+      <li>Passwords or login data</li>
+      <li>Any personal documents</li>
+    </ul>
+  </div>
+
+  <!-- 3. Files and Documents -->
+  <div class="section">
+    <div class="section-num">03</div>
+    <h2>Your Files and Documents</h2>
+    <div class="highlight-box">
+      <p>✅ <strong>Your files never leave your device.</strong> All image to PDF conversion happens entirely in your browser using JavaScript. No files are uploaded to any server.</p>
+    </div>
+    <p>This means:</p>
+    <ul>
+      <li>We cannot see your images</li>
+      <li>We cannot see your PDF files</li>
+      <li>We have no access to your documents</li>
+      <li>Your files are 100% private</li>
+      <li>Files are deleted when you close the browser</li>
+    </ul>
+  </div>
+
+  <!-- 4. Cookies -->
+  <div class="section">
+    <div class="section-num">04</div>
+    <h2>Cookies and Tracking</h2>
+    <p>We use cookies and similar tracking technologies to improve your experience and show relevant advertisements.</p>
+
+    <p><strong style="color:#fff">Types of cookies we use:</strong></p>
+    <ul>
+      <li><strong style="color:#fff">Essential cookies</strong> — Required for the site to function</li>
+      <li><strong style="color:#fff">Analytics cookies</strong> — Help us understand how you use our site (Google Analytics)</li>
+      <li><strong style="color:#fff">Advertising cookies</strong> — Used to show relevant ads (Google AdSense, Adsterra)</li>
+      <li><strong style="color:#fff">Preference cookies</strong> — Remember your dark/light mode choice</li>
+    </ul>
+
+    <p>You can control cookies through your browser settings. Disabling cookies may affect some features.</p>
+  </div>
+
+  <!-- 5. Advertising -->
+  <div class="section">
+    <div class="section-num">05</div>
+    <h2>Advertising</h2>
+    <p>We use third-party advertising services to display ads on our website. These services may use cookies and similar technologies to show you relevant advertisements.</p>
+
+    <p><strong style="color:#fff">Our advertising partners include:</strong></p>
+    <ul>
+      <li>
+        <strong style="color:#fff">Google AdSense</strong> — Google may use cookies to serve ads based on your prior visits to our website or other websites. You can opt out at
+        <a href="https://www.google.com/settings/ads" target="_blank" style="color:var(--coral)">google.com/settings/ads</a>
+      </li>
+      <li>
+        <strong style="color:#fff">Adsterra</strong> — Adsterra Network uses cookies for ad personalization and measurement. View their privacy policy at
+        <a href="https://adsterra.com/privacy-policy" target="_blank" style="color:var(--coral)">adsterra.com/privacy-policy</a>
+      </li>
+    </ul>
+
+    <div class="highlight-box">
+      <p>📢 We do not sell your personal data to advertisers. Ad networks collect anonymous data for ad targeting purposes only.</p>
+    </div>
+  </div>
+
+  <!-- 6. Google Analytics -->
+  <div class="section">
+    <div class="section-num">06</div>
+    <h2>Google Analytics</h2>
+    <p>We use Google Analytics to understand how visitors use our site. Google Analytics collects anonymous usage data such as:</p>
+    <ul>
+      <li>Number of visitors</li>
+      <li>Pages viewed</li>
+      <li>Time spent on site</li>
+      <li>Country of visitor</li>
+      <li>Device and browser type</li>
+    </ul>
+    <p>This data is anonymous and cannot be used to identify you personally. You can opt out of Google Analytics by installing the
+      <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" style="color:var(--coral)">Google Analytics Opt-out Browser Add-on</a>.
+    </p>
+  </div>
+
+  <!-- 7. Third Party Links -->
+  <div class="section">
+    <div class="section-num">07</div>
+    <h2>Third Party Links</h2>
+    <p>Our website may contain links to third-party websites. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
+    <p>We encourage you to review the privacy policy of every site you visit.</p>
+  </div>
+
+  <!-- 8. EEA / GDPR -->
+  <div class="section">
+    <div class="section-num">08</div>
+    <h2>EEA, UK and Switzerland Users (GDPR)</h2>
+    <p>If you are located in the European Economic Area (EEA), United Kingdom, or Switzerland, you have certain rights under the General Data Protection Regulation (GDPR):</p>
+    <ul>
+      <li><strong style="color:#fff">Right to access</strong> — Request a copy of your personal data</li>
+      <li><strong style="color:#fff">Right to rectification</strong> — Request correction of inaccurate data</li>
+      <li><strong style="color:#fff">Right to erasure</strong> — Request deletion of your data</li>
+      <li><strong style="color:#fff">Right to restrict processing</strong> — Request limitation of data processing</li>
+      <li><strong style="color:#fff">Right to data portability</strong> — Request transfer of your data</li>
+      <li><strong style="color:#fff">Right to object</strong> — Object to processing of your data</li>
+    </ul>
+    <div class="highlight-box">
+      <p>🍪 We use a Google certified Consent Management Platform (CMP) to collect consent from users in the EEA, UK and Switzerland before showing personalized ads. You can withdraw consent at any time.</p>
+    </div>
+    <p>To exercise any of these rights, please contact us at the email below.</p>
+  </div>
+
+  <!-- 9. Children's Privacy -->
+  <div class="section">
+    <div class="section-num">09</div>
+    <h2>Children's Privacy</h2>
+    <p>Our service is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13.</p>
+    <p>If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately and we will delete such information.</p>
+  </div>
+
+  <!-- 10. Data Security -->
+  <div class="section">
+    <div class="section-num">10</div>
+    <h2>Data Security</h2>
+    <p>We take data security seriously. Since all file processing happens in your browser:</p>
+    <ul>
+      <li>Your files never touch our servers</li>
+      <li>We use HTTPS encryption on all pages</li>
+      <li>No user accounts or passwords to protect</li>
+      <li>Minimal data collection reduces security risk</li>
+    </ul>
+    <p>However, no method of internet transmission is 100% secure. We cannot guarantee absolute security of any information transmitted online.</p>
+  </div>
+
+  <!-- 11. Changes -->
+  <div class="section">
+    <div class="section-num">11</div>
+    <h2>Changes to This Policy</h2>
+    <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
+    <p>You are advised to review this Privacy Policy periodically for any changes. Changes are effective when posted on this page.</p>
+  </div>
+
+  <!-- 12. Contact -->
+  <div class="section">
+    <div class="section-num">12</div>
+    <h2>Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy or our privacy practices, please contact us:</p>
+    <div class="contact-box">
+      <p style="color:#fff;font-weight:700;margin-bottom:8px;">PixelBind</p>
+      <p style="color:var(--muted);font-size:0.88rem;margin-bottom:6px;">
+        📧 Email:
+        <a href="mailto:pixelbindxyz@gmail.com">
+          pixelbindxyz@gmail.com
+        </a>
+      </p>
+      <p style="color:var(--muted);font-size:0.88rem;margin-bottom:6px;">
+        🌐 Website:
+        <a href="https://pixel-bind.vercel.app" target="_blank">
+          pixel-bind.vercel.app
+        </a>
+      </p>
+      <p style="color:var(--muted);font-size:0.88rem;">
+        📅 Response time: Within 48 hours
+      </p>
+    </div>
+  </div>
+
+</div><!-- /content -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <span class="fp">Pixel</span>
+    <span class="fb">Bind</span>
+  </div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Use</a>
+    <a href="mailto:pixelbindxyz@gmail.com">Contact</a>
+  </div>
+  <div class="footer-copy">
+    © 2025 PixelBind · All rights reserved
+  </div>
+</footer>
+
+</body>
+</html>
