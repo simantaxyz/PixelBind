@@ -314,7 +314,12 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:28
   .settings-grid,.settings-grid-2{grid-template-columns:1fr 1fr;}
   .ad-bottom-wrap{padding:0 20px 32px;}
   footer{padding:24px 20px;}
-  .footer-links{display:none;}
+  .footer-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  justify-content:center;
+}
   body{cursor:auto;}
   .cursor,.cursor-ring{display:none;}
 }
