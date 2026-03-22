@@ -284,14 +284,72 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;heigh
 .ad-bottom-box .ad-label{position:absolute;top:7px;right:12px;}
 
 /* FOOTER */
-footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:28px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;transition:border-color .3s;}
-.footer-logo{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:2px;display:flex;}
-.footer-logo .fp{color:var(--logo-pixel);}
-.footer-logo .fb{color:var(--logo-bind);}
-.footer-links{display:flex;gap:20px;}
-.footer-links a{font-size:0.75rem;color:var(--muted);text-decoration:none;transition:color .2s;}
-.footer-links a:hover{color:var(--coral);}
-.footer-copy{font-size:0.72rem;color:var(--muted);}
+footer {
+  position:relative; z-index:2;
+  border-top:1px solid var(--border);
+  padding:28px 48px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:16px;
+  transition:border-color .3s;
+}
+.footer-logo {
+  font-family:'Bebas Neue',sans-serif;
+  font-size:1.3rem; letter-spacing:2px;
+  display:flex;
+}
+.footer-logo .fp { color:var(--coral); }
+.footer-logo .fb { color:var(--text); }
+.footer-links {
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+.footer-links a {
+  font-size:0.75rem;
+  color:var(--muted);
+  text-decoration:none;
+  transition:color .2s;
+}
+.footer-links a:hover { color:var(--coral); }
+.footer-copy {
+  font-size:0.72rem;
+  color:var(--muted);
+}
+
+/* MOBILE FOOTER — FULLY VISIBLE */
+@media(max-width:768px) {
+  footer {
+    padding:24px 20px;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:14px;
+  }
+  .footer-links {
+    display:flex !important;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:16px;
+  }
+  .footer-links a {
+    font-size:0.82rem;
+  }
+}
+
+@media(max-width:480px) {
+  footer {
+    padding:20px 16px;
+  }
+  .footer-links {
+    gap:12px;
+  }
+  .footer-links a {
+    font-size:0.78rem;
+  }
+}
 
 /* TOAST */
 .toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--surface);border:1px solid rgba(255,77,46,0.3);border-radius:50px;padding:12px 24px;font-size:0.86rem;font-weight:600;z-index:9997;opacity:0;transition:all .4s cubic-bezier(.34,1.56,.64,1);white-space:nowrap;pointer-events:none;color:var(--text);box-shadow:0 8px 32px var(--shadow);}
