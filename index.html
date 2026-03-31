@@ -39,7 +39,16 @@ href="https://pixel-bind.vercel.app/">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cabinet+Grotesk:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <style>
-
+/* Hide scrollbar for sliders */
+#steps-track::-webkit-scrollbar,
+#features-track::-webkit-scrollbar {
+  display:none;
+}
+#steps-track,
+#features-track {
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+}
 [data-theme="dark"] {
   --bg:       #0a0a0a;
   --surface:  #141414;
@@ -963,87 +972,168 @@ footer {
   max-width:900px;margin:0 auto;
   padding:0 16px 40px;
 ">
-
-  <!-- How to Use -->
-  <div style="
-    background:var(--surface);
-    border:1px solid var(--border);
-    border-radius:16px;
-    padding:32px;
-    margin-bottom:20px;
-  ">
-    <h2 style="
-      font-family:'Bebas Neue',sans-serif;
-      font-size:2rem;color:var(--text);
-      margin-bottom:20px;letter-spacing:0.5px;
-    ">How to Convert Images to PDF Free</h2>
-
-    <div style="
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px;
-  margin-bottom:20px;
+<!-- HOW TO USE SLIDER -->
+<div style="
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:clamp(16px,3vw,32px);
+  margin-bottom:16px;
+  overflow:hidden;
 ">
+  <h2 style="
+    font-family:'Bebas Neue',sans-serif;
+    font-size:clamp(1.4rem,4vw,2rem);
+    color:var(--text);
+    margin-bottom:20px;
+    letter-spacing:0.5px;
+  ">How to Convert Images to PDF Free</h2>
+
+  <!-- Slider Wrapper -->
+  <div style="position:relative;">
+
+    <!-- Slides Track -->
+    <div id="steps-track" style="
+      display:flex;
+      gap:12px;
+      overflow-x:auto;
+      scroll-snap-type:x mandatory;
+      -webkit-overflow-scrolling:touch;
+      scrollbar-width:none;
+      padding-bottom:16px;
+    ">
+
+      <!-- Step 1 -->
       <div style="
+        min-width:220px;
+        flex-shrink:0;
+        scroll-snap-align:start;
         background:var(--surface2);
-        border-radius:12px;padding:20px;
+        border-radius:12px;
+        padding:20px;
         text-align:center;
+        border:1px solid var(--border);
       ">
-        <div style="
-          font-size:2rem;margin-bottom:10px;
-        ">1️⃣</div>
+        <div style="font-size:2.5rem;
+          margin-bottom:12px;">1️⃣</div>
         <h3 style="
-          color:var(--coral);font-size:0.9rem;
-          font-weight:700;margin-bottom:8px;
+          color:var(--coral);
+          font-size:0.95rem;
+          font-weight:700;
+          margin-bottom:8px;
         ">Upload Images</h3>
         <p style="
-          color:var(--muted);font-size:0.82rem;
+          color:var(--muted);
+          font-size:0.82rem;
           line-height:1.6;
         ">Click the upload area or drag
         and drop your JPG, PNG, WebP
-        or GIF images</p>
+        or GIF images onto the page</p>
       </div>
+
+      <!-- Step 2 -->
       <div style="
+        min-width:220px;
+        flex-shrink:0;
+        scroll-snap-align:start;
         background:var(--surface2);
-        border-radius:12px;padding:20px;
+        border-radius:12px;
+        padding:20px;
         text-align:center;
+        border:1px solid var(--border);
       ">
-        <div style="
-          font-size:2rem;margin-bottom:10px;
-        ">2️⃣</div>
+        <div style="font-size:2.5rem;
+          margin-bottom:12px;">2️⃣</div>
         <h3 style="
-          color:var(--coral);font-size:0.9rem;
-          font-weight:700;margin-bottom:8px;
+          color:var(--coral);
+          font-size:0.95rem;
+          font-weight:700;
+          margin-bottom:8px;
         ">Choose Settings</h3>
         <p style="
-          color:var(--muted);font-size:0.82rem;
+          color:var(--muted);
+          font-size:0.82rem;
           line-height:1.6;
         ">Select page size, orientation,
         image quality and margin
-        as per your need</p>
+        settings as per your need</p>
       </div>
+
+      <!-- Step 3 -->
       <div style="
+        min-width:220px;
+        flex-shrink:0;
+        scroll-snap-align:start;
         background:var(--surface2);
-        border-radius:12px;padding:20px;
+        border-radius:12px;
+        padding:20px;
         text-align:center;
+        border:1px solid var(--border);
       ">
-        <div style="
-          font-size:2rem;margin-bottom:10px;
-        ">3️⃣</div>
+        <div style="font-size:2.5rem;
+          margin-bottom:12px;">3️⃣</div>
         <h3 style="
-          color:var(--coral);font-size:0.9rem;
-          font-weight:700;margin-bottom:8px;
+          color:var(--coral);
+          font-size:0.95rem;
+          font-weight:700;
+          margin-bottom:8px;
         ">Download PDF</h3>
         <p style="
-          color:var(--muted);font-size:0.82rem;
+          color:var(--muted);
+          font-size:0.82rem;
           line-height:1.6;
-        ">Click Generate PDF and
-        instantly download your
-        perfect PDF file</p>
+        ">Click Generate PDF button
+        and instantly download your
+        perfect PDF file for free</p>
+      </div>
+
+    </div>
+
+    <!-- Dots indicator -->
+    <div style="
+      display:flex;
+      justify-content:center;
+      gap:6px;
+      margin-top:4px;
+    ">
+      <div class="steps-dot active-dot"
+        style="
+          width:8px;height:8px;
+          border-radius:50%;
+          background:var(--coral);
+          transition:all .3s;
+          cursor:pointer;
+        "
+        onclick="scrollSlider(
+          'steps-track',0)">
+      </div>
+      <div class="steps-dot"
+        style="
+          width:8px;height:8px;
+          border-radius:50%;
+          background:var(--border);
+          transition:all .3s;
+          cursor:pointer;
+        "
+        onclick="scrollSlider(
+          'steps-track',1)">
+      </div>
+      <div class="steps-dot"
+        style="
+          width:8px;height:8px;
+          border-radius:50%;
+          background:var(--border);
+          transition:all .3s;
+          cursor:pointer;
+        "
+        onclick="scrollSlider(
+          'steps-track',2)">
       </div>
     </div>
-  </div>
 
+  </div>
+</div>
+  
   <!-- About Section -->
   <div style="
     background:var(--surface);
@@ -1105,146 +1195,234 @@ footer {
       grid-template-columns:1fr 1fr;
       gap:14px;
     ">
+      <!-- FEATURES SLIDER -->
+<div style="
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:clamp(16px,3vw,32px);
+  margin-bottom:16px;
+  overflow:hidden;
+">
+  <h2 style="
+    font-family:'Bebas Neue',sans-serif;
+    font-size:clamp(1.4rem,4vw,2rem);
+    color:var(--text);
+    margin-bottom:20px;
+    letter-spacing:0.5px;
+  ">Why Choose PixelBind PDF Maker?</h2>
+
+  <!-- Slider -->
+  <div style="position:relative;">
+
+    <div id="features-track" style="
+      display:flex;
+      gap:12px;
+      overflow-x:auto;
+      scroll-snap-type:x mandatory;
+      -webkit-overflow-scrolling:touch;
+      scrollbar-width:none;
+      padding-bottom:16px;
+    ">
+
       <!-- Feature 1 -->
-<div style="
-  display:flex;
-  gap:14px;
-  align-items:flex-start;
-  background:var(--surface2);
-  border-radius:12px;
-  padding:16px;
-">
-  <div style="font-size:1.8rem;flex-shrink:0;">🔒</div>
-  <div>
-    <h3 style="
-      color:var(--text);font-size:0.9rem;
-      font-weight:700;margin-bottom:6px;
-    ">100% Private and Secure</h3>
-    <p style="
-      color:var(--muted);font-size:0.82rem;
-      line-height:1.6;
-    ">Your images never leave your device.
-    All conversion happens in the browser
-    with zero server uploads.</p>
-  </div>
-</div>
+      <div style="
+        min-width:240px;
+        flex-shrink:0;
+        scroll-snap-align:start;
+        background:var(--surface2);
+        border-radius:12px;
+        padding:20px;
+        border:1px solid var(--border);
+      ">
+        <div style="font-size:2rem;
+          margin-bottom:12px;">🔒</div>
+        <h3 style="
+          color:var(--text);
+          font-size:0.95rem;
+          font-weight:700;
+          margin-bottom:8px;
+        ">100% Private and Secure</h3>
+        <p style="
+          color:var(--muted);
+          font-size:0.82rem;
+          line-height:1.6;
+        ">Your images never leave your
+        device. All conversion happens
+        in browser with zero server
+        uploads ever.</p>
+      </div>
 
-<!-- Feature 2 -->
-<div style="
-  display:flex;
-  gap:14px;
-  align-items:flex-start;
-  background:var(--surface2);
-  border-radius:12px;
-  padding:16px;
-">
-  <div style="font-size:1.8rem;flex-shrink:0;">⚡</div>
-  <div>
-    <h3 style="
-      color:var(--text);font-size:0.9rem;
-      font-weight:700;margin-bottom:6px;
-    ">Lightning Fast Conversion</h3>
-    <p style="
-      color:var(--muted);font-size:0.82rem;
-      line-height:1.6;
-    ">Convert multiple images to PDF
-    in just seconds. No waiting,
-    no loading screens.</p>
-  </div>
-</div>
+      <!-- Feature 2 -->
+      <div style="
+        min-width:240px;
+        flex-shrink:0;
+        scroll-snap-align:start;
+        background:var(--surface2);
+        border-radius:12px;
+        padding:20px;
+        border:1px solid var(--border);
+      ">
+        <div style="font-size:2rem;
+          margin-bottom:12px;">⚡</div>
+        <h3 style="
+          color:var(--text);
+          font-size:0.95rem;
+          font-weight:700;
+          margin-bottom:8px;
+        ">Lightning Fast Conversion</h3>
+        <p style="
+          color:var(--muted);
+          font-size:0.82rem;
+          line-height:1.6;
+        ">Convert multiple images to PDF
+        in just seconds. No waiting,
+        no loading screens at all.</p>
+      </div>
 
-<!-- Feature 3 -->
-<div style="
-  display:flex;
-  gap:14px;
-  align-items:flex-start;
-  background:var(--surface2);
-  border-radius:12px;
-  padding:16px;
-">
-  <div style="font-size:1.8rem;flex-shrink:0;">📱</div>
-  <div>
-    <h3 style="
-      color:var(--text);font-size:0.9rem;
-      font-weight:700;margin-bottom:6px;
-    ">Works on All Devices</h3>
-    <p style="
-      color:var(--muted);font-size:0.82rem;
-      line-height:1.6;
-    ">Use PixelBind on Android, iPhone,
-    laptop or desktop. Works on
-    any modern browser.</p>
-  </div>
-</div>
+      <!-- Feature 3 -->
+      <div style="
+        min-width:240px;
+        flex-shrink:0;
+        scroll-snap-align:start;
+        background:var(--surface2);
+        border-radius:12px;
+        padding:20px;
+        border:1px solid var(--border);
+      ">
+        <div style="font-size:2rem;
+          margin-bottom:12px;">📱</div>
+        <h3 style="
+          color:var(--text);
+          font-size:0.95rem;
+          font-weight:700;
+          margin-bottom:8px;
+        ">Works on All Devices</h3>
+        <p style="
+          color:var(--muted);
+          font-size:0.82rem;
+          line-height:1.6;
+        ">Use PixelBind on Android,
+        iPhone, laptop or desktop.
+        Works on any modern browser.</p>
+      </div>
 
-<!-- Feature 4 -->
-<div style="
-  display:flex;
-  gap:14px;
-  align-items:flex-start;
-  background:var(--surface2);
-  border-radius:12px;
-  padding:16px;
-">
-  <div style="font-size:1.8rem;flex-shrink:0;">🆓</div>
-  <div>
-    <h3 style="
-      color:var(--text);font-size:0.9rem;
-      font-weight:700;margin-bottom:6px;
-    ">Completely Free Forever</h3>
-    <p style="
-      color:var(--muted);font-size:0.82rem;
-      line-height:1.6;
-    ">No subscription fees, no watermarks,
-    no hidden charges. Free forever.</p>
-  </div>
-</div>
+      <!-- Feature 4 -->
+      <div style="
+        min-width:240px;
+        flex-shrink:0;
+        scroll-snap-align:start;
+        background:var(--surface2);
+        border-radius:12px;
+        padding:20px;
+        border:1px solid var(--border);
+      ">
+        <div style="font-size:2rem;
+          margin-bottom:12px;">🆓</div>
+        <h3 style="
+          color:var(--text);
+          font-size:0.95rem;
+          font-weight:700;
+          margin-bottom:8px;
+        ">Completely Free Forever</h3>
+        <p style="
+          color:var(--muted);
+          font-size:0.82rem;
+          line-height:1.6;
+        ">No subscription fees, no
+        watermarks, no hidden charges.
+        PixelBind is free forever.</p>
+      </div>
 
-<!-- Feature 5 -->
-<div style="
-  display:flex;
-  gap:14px;
-  align-items:flex-start;
-  background:var(--surface2);
-  border-radius:12px;
-  padding:16px;
-">
-  <div style="font-size:1.8rem;flex-shrink:0;">🖼</div>
-  <div>
-    <h3 style="
-      color:var(--text);font-size:0.9rem;
-      font-weight:700;margin-bottom:6px;
-    ">Multiple Format Support</h3>
-    <p style="
-      color:var(--muted);font-size:0.82rem;
-      line-height:1.6;
-    ">Supports JPG, PNG, WebP, GIF
-    and BMP. Convert any image
-    type to PDF.</p>
-  </div>
-</div>
+      <!-- Feature 5 -->
+      <div style="
+        min-width:240px;
+        flex-shrink:0;
+        scroll-snap-align:start;
+        background:var(--surface2);
+        border-radius:12px;
+        padding:20px;
+        border:1px solid var(--border);
+      ">
+        <div style="font-size:2rem;
+          margin-bottom:12px;">🖼</div>
+        <h3 style="
+          color:var(--text);
+          font-size:0.95rem;
+          font-weight:700;
+          margin-bottom:8px;
+        ">Multiple Format Support</h3>
+        <p style="
+          color:var(--muted);
+          font-size:0.82rem;
+          line-height:1.6;
+        ">Supports JPG, PNG, WebP, GIF
+        and BMP formats. Mix different
+        image types in one PDF.</p>
+      </div>
 
-<!-- Feature 6 -->
-<div style="
-  display:flex;
-  gap:14px;
-  align-items:flex-start;
-  background:var(--surface2);
-  border-radius:12px;
-  padding:16px;
-">
-  <div style="font-size:1.8rem;flex-shrink:0;">⚙</div>
-  <div>
-    <h3 style="
-      color:var(--text);font-size:0.9rem;
-      font-weight:700;margin-bottom:6px;
-    ">Full Customization</h3>
-    <p style="
-      color:var(--muted);font-size:0.82rem;
-      line-height:1.6;
-    ">Control page size, orientation,
-    quality, margins and filename
-    of your PDF.</p>
+      <!-- Feature 6 -->
+      <div style="
+        min-width:240px;
+        flex-shrink:0;
+        scroll-snap-align:start;
+        background:var(--surface2);
+        border-radius:12px;
+        padding:20px;
+        border:1px solid var(--border);
+      ">
+        <div style="font-size:2rem;
+          margin-bottom:12px;">⚙</div>
+        <h3 style="
+          color:var(--text);
+          font-size:0.95rem;
+          font-weight:700;
+          margin-bottom:8px;
+        ">Full Customization</h3>
+        <p style="
+          color:var(--muted);
+          font-size:0.82rem;
+          line-height:1.6;
+        ">Control page size, orientation,
+        image quality, margins and
+        filename of your PDF easily.</p>
+      </div>
+
+    </div>
+
+    <!-- Dots -->
+    <div style="
+      display:flex;
+      justify-content:center;
+      gap:6px;
+      margin-top:4px;
+    ">
+      <div style="width:8px;height:8px;
+        border-radius:50%;
+        background:var(--coral);">
+      </div>
+      <div style="width:8px;height:8px;
+        border-radius:50%;
+        background:var(--border);">
+      </div>
+      <div style="width:8px;height:8px;
+        border-radius:50%;
+        background:var(--border);">
+      </div>
+      <div style="width:8px;height:8px;
+        border-radius:50%;
+        background:var(--border);">
+      </div>
+      <div style="width:8px;height:8px;
+        border-radius:50%;
+        background:var(--border);">
+      </div>
+      <div style="width:8px;height:8px;
+        border-radius:50%;
+        background:var(--border);">
+      </div>
+    </div>
+
   </div>
 </div>
     </div>
@@ -1799,5 +1977,47 @@ window.addEventListener('load',()=>{
   ]
 }
 </script>
+  <script>
+    // Slider scroll function
+function scrollSlider(trackId, index) {
+  const track =
+    document.getElementById(trackId);
+  const cardWidth =
+    track.children[0].offsetWidth + 12;
+  track.scrollTo({
+    left: cardWidth * index,
+    behavior: 'smooth'
+  });
+}
+
+// Update dots on scroll
+document.addEventListener('DOMContentLoaded',
+  () => {
+  const stepsTrack =
+    document.getElementById('steps-track');
+
+  if(stepsTrack) {
+    stepsTrack.addEventListener('scroll',
+      () => {
+      const dots = document.querySelectorAll(
+        '.steps-dot');
+      const index = Math.round(
+        stepsTrack.scrollLeft /
+        (stepsTrack.children[0]
+          .offsetWidth + 12));
+      dots.forEach((d, i) => {
+        d.style.background =
+          i === index
+          ? 'var(--coral)'
+          : 'var(--border)';
+        d.style.width =
+          i === index ? '20px' : '8px';
+        d.style.borderRadius = '50px';
+      });
+    });
+  }
+});
+
+  </script>
 </body>
 </html>
