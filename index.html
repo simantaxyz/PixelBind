@@ -338,80 +338,79 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;heigh
 <!-- REPLACE WITH responsive grid -->
 <div style="
   display:grid;
-  grid-template-columns:1fr 1fr 1fr;
-    repeat(auto-fit, minmax(200px, 1fr));
-  gap:14px;
+  grid-template-columns:1fr;
+  gap:12px;
+  margin-bottom:20px;
 ">
-    <div style="
-      background:var(--surface);
-      border:1px solid var(--border);
-      border-radius:14px;
-      padding:20px;
-      text-align:center;
-    ">
-      <div style="font-size:2rem;
-        margin-bottom:10px;">🔒</div>
-      <h3 style="
-        font-family:'Bebas Neue',sans-serif;
-        font-size:1rem;
-        color:var(--text);
-        margin-bottom:6px;
-      ">100% Private</h3>
-      <p style="
-        color:var(--muted);
-        font-size:0.78rem;
-        line-height:1.6;
-      ">Files never uploaded to any server.
-      Everything stays on your device.</p>
-    </div>
-
-    <div style="
-      background:var(--surface);
-      border:1px solid var(--border);
-      border-radius:14px;
-      padding:20px;
-      text-align:center;
-    ">
-      <div style="font-size:2rem;
-        margin-bottom:10px;">⚡</div>
-      <h3 style="
-        font-family:'Bebas Neue',sans-serif;
-        font-size:1rem;
-        color:var(--text);
-        margin-bottom:6px;
-      ">Instant Convert</h3>
-      <p style="
-        color:var(--muted);
-        font-size:0.78rem;
-        line-height:1.6;
-      ">Convert multiple images to PDF
-      in seconds. No waiting.</p>
-    </div>
-
-    <div style="
-      background:var(--surface);
-      border:1px solid var(--border);
-      border-radius:14px;
-      padding:20px;
-      text-align:center;
-    ">
-      <div style="font-size:2rem;
-        margin-bottom:10px;">🆓</div>
-      <h3 style="
-        font-family:'Bebas Neue',sans-serif;
-        font-size:1rem;
-        color:var(--text);
-        margin-bottom:6px;
-      ">Always Free</h3>
-      <p style="
-        color:var(--muted);
-        font-size:0.78rem;
-        line-height:1.6;
-      ">No subscription. No watermarks.
-      Free forever with no limits.</p>
-    </div>
-
+   
+<!-- Step 1 -->
+<div style="
+  background:var(--surface2);
+  border-radius:12px;
+  padding:16px 20px;
+  display:flex;
+  align-items:flex-start;
+  gap:16px;
+">
+  <div style="font-size:2rem;flex-shrink:0;">1️⃣</div>
+  <div>
+    <h3 style="
+      color:var(--coral);font-size:0.95rem;
+      font-weight:700;margin-bottom:6px;
+    ">Upload Images</h3>
+    <p style="
+      color:var(--muted);font-size:0.84rem;
+      line-height:1.6;
+    ">Click the upload area or drag and drop
+    your JPG, PNG, WebP or GIF images</p>
   </div>
+</div>
+
+<!-- Step 2 -->
+<div style="
+  background:var(--surface2);
+  border-radius:12px;
+  padding:16px 20px;
+  display:flex;
+  align-items:flex-start;
+  gap:16px;
+">
+  <div style="font-size:2rem;flex-shrink:0;">2️⃣</div>
+  <div>
+    <h3 style="
+      color:var(--coral);font-size:0.95rem;
+      font-weight:700;margin-bottom:6px;
+    ">Choose Settings</h3>
+    <p style="
+      color:var(--muted);font-size:0.84rem;
+      line-height:1.6;
+    ">Select page size, orientation,
+    image quality and margin</p>
+  </div>
+</div>
+
+<!-- Step 3 -->
+<div style="
+  background:var(--surface2);
+  border-radius:12px;
+  padding:16px 20px;
+  display:flex;
+  align-items:flex-start;
+  gap:16px;
+">
+  <div style="font-size:2rem;flex-shrink:0;">3️⃣</div>
+  <div>
+    <h3 style="
+      color:var(--coral);font-size:0.95rem;
+      font-weight:700;margin-bottom:6px;
+    ">Download PDF</h3>
+    <p style="
+      color:var(--muted);font-size:0.84rem;
+      line-height:1.6;
+    ">Click Generate PDF and instantly
+    download your perfect PDF file</p>
+  </div>
+</div>
 
   <!-- FAQ Section — Helps SEO! -->
   <div style="
@@ -528,8 +527,6 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;heigh
     </div>
 
   </div>
-
-</div>
 /* FOOTER */
 footer {
   position:relative; z-index:2;
